@@ -1,9 +1,21 @@
 <div class="container-fluid">
   <div class="row">
-    <div class="col-sm-4">
-      cities works
+    <div class="col-sm-4 cities-component-aside">
+      <h1>Cities</h1>
+
+
+      <div *ngFor="let city of cities" class="row cities-component-card">
+        <div class="col-sm-4">
+          <img src="assets/images/thumbnail-300x225.gif"
+               alt="">
+        </div>
+        <div class="col-sm-8">
+          <h1>{{city.name}}</h1>
+        </div>
+      </div>
     </div>
-    <div class="col-sm-8">
+
+    <div class="col-sm-8 cities-component-main">
       One of three columns
     </div>
   </div>
