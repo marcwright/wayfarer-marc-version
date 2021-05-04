@@ -3,7 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import {CarouselComponent} from './carousel/carousel.component';
 
 const routes: Routes = [ {
-    path: 'home',
+    path: '',
     component: CarouselComponent
   }
   // {
