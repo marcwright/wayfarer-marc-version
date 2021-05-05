@@ -5,6 +5,8 @@ import {AppComponent} from './app.component';
 import {NavbarComponent} from './navbar/navbar.component';
 import {CarouselComponent} from './carousel/carousel.component';
 import {CitiesComponent} from './cities/cities.component';
+import {CityComponent} from './city/city.component';
+
 
 @NgModule({
   declarations: [
@@ -12,6 +14,7 @@ import {CitiesComponent} from './cities/cities.component';
     NavbarComponent,
     CarouselComponent,
     CitiesComponent,
+    CityComponent
   ],
   imports: [
     BrowserModule,

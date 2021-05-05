@@ -21,7 +21,7 @@ export class CityComponent implements OnInit {
     this.route.paramMap
       .subscribe(params => {
         this.city = CITIES.find(city => {
-          return city.id === parseInt(params.get('id'));
+          return city.id === parseInt(params.get('id'), 10);
         });
       });
     console.log(this.city);

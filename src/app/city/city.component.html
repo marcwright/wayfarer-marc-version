@@ -1,7 +1,26 @@
-<div class="col-sm-4 cities-component-card">
-  <img src="{{city.imgUrl}}"
-       alt="">
-</div>
-<div class="col-sm-8">
-  <h1>{{city.name}}</h1>
+<div class="container-fluid">
+  <div class="row city-component-card">
+    <div class="col-sm-4">
+      <h1>{{city.name}}</h1>
+    </div>
+    <div class="col-sm-8">
+      <img src="{{city.imgUrl}}"
+           alt="">
+    </div>
+  </div>
+  <div class="row">
+    <h1>Posts</h1>
+    <div *ngFor="let city of cities">
+      <div *ngFor="let post of city.posts" class="row posts-component-card">
+        <div class="col-sm-2">
+          <img src="{{city.imgUrl}}"
+               alt="">
+        </div>
+        <div class="col-sm-8">
+          <h1><a routerLink="/cities/{{city.id}}">{{post.title}}</a></h1>
+          <p>{{post.body}}</p>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
