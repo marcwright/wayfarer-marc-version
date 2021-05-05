@@ -11,13 +11,13 @@
   <div class="row">
     <h1>Posts</h1>
     <!--    <div *ngFor="let c of cities">-->
-    <div *ngFor="let post of city.posts" class="row posts-component-card">
+    <div *ngFor="let post of city.posts; index as i" class="row posts-component-card">
       <div class="col-sm-2">
         <img src="{{city.imgUrl}}"
              alt="">
       </div>
       <div class="col-sm-8">
-        <h1><a routerLink="/cities/{{city.id}}">{{city.name}}{{post.title}}</a></h1>
+        <h1><a routerLink="/cities/{{city.id}}/posts/{{i}}">{{city.name}}{{post.title}}</a></h1>
         <p>{{post.body}}</p>
       </div>
       <!--      </div>-->
