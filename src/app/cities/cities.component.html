@@ -6,17 +6,16 @@
 
       <div *ngFor="let city of cities" class="row cities-component-card">
         <div class="col-sm-4">
-          <img src="assets/images/thumbnail-300x225.gif"
+          <img src="{{city.imgUrl}}"
                alt="">
         </div>
         <div class="col-sm-8">
-          <h1>{{city.name}}</h1>
+          <h1><a routerLink="/cities/{{city.id}}">{{city.name}}</a></h1>
         </div>
       </div>
-    </div>
 
+    </div>
     <div class="col-sm-8 cities-component-main">
-      One of three columns
+      <router-outlet></router-outlet>
     </div>
   </div>
-</div>
